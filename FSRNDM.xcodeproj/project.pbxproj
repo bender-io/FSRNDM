@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5607F7C622B0AEB900DCFBCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607F7C522B0AEB900DCFBCC /* AppDelegate.swift */; };
+		5607F7CB22B0AEB900DCFBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5607F7C922B0AEB900DCFBCC /* Main.storyboard */; };
+		5607F7CD22B0AEBA00DCFBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5607F7CC22B0AEBA00DCFBCC /* Assets.xcassets */; };
+		5607F7D022B0AEBA00DCFBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5607F7CE22B0AEBA00DCFBCC /* LaunchScreen.storyboard */; };
+		5607F7D822B0AF6000DCFBCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5607F7D722B0AF6000DCFBCC /* GoogleService-Info.plist */; };
+		5609BF3322B0B33300455C68 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF2B22B0B32F00455C68 /* FIRAnalyticsConnector.framework */; };
+		5609BF3422B0B33300455C68 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF2C22B0B32F00455C68 /* FirebaseCore.framework */; };
+		5609BF3522B0B33300455C68 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF2D22B0B33000455C68 /* FirebaseAnalytics.framework */; };
+		5609BF3622B0B33300455C68 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF2E22B0B33000455C68 /* FirebaseCoreDiagnostics.framework */; };
+		5609BF3722B0B33300455C68 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF2F22B0B33100455C68 /* GoogleAppMeasurement.framework */; };
+		5609BF3822B0B33300455C68 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3022B0B33200455C68 /* GoogleUtilities.framework */; };
+		5609BF3922B0B33300455C68 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3122B0B33200455C68 /* nanopb.framework */; };
+		5609BF3A22B0B33300455C68 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3222B0B33300455C68 /* FirebaseInstanceID.framework */; };
+		5609BF4022B0B36000455C68 /* gRPCCertificates-Cpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5609BF3F22B0B35F00455C68 /* gRPCCertificates-Cpp.bundle */; };
+		5609BF4322B0B37800455C68 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3B22B0B35400455C68 /* leveldb-library.framework */; };
+		5609BF4422B0B37800455C68 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3C22B0B35700455C68 /* Protobuf.framework */; };
+		5609BF4522B0B37800455C68 /* BoringSSL-GRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3D22B0B35B00455C68 /* BoringSSL-GRPC.framework */; };
+		5609BF4622B0B37800455C68 /* gRPC-Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF3E22B0B35F00455C68 /* gRPC-Core.framework */; };
+		5609BF4722B0B37800455C68 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4122B0B36300455C68 /* FirebaseFirestore.framework */; };
+		5609BF4822B0B37800455C68 /* gRPC-C++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4222B0B37800455C68 /* gRPC-C++.framework */; };
+		5609BF4A22B0B3A100455C68 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4922B0B3A100455C68 /* libc++.tbd */; };
+		5609BF4C22B0B3AB00455C68 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4B22B0B3AB00455C68 /* libz.tbd */; };
+		5609BF4E22B0B3B900455C68 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */; };
+		5609BF5022B0B3C300455C68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4F22B0B3C300455C68 /* StoreKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5607F7C222B0AEB900DCFBCC /* FSRNDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSRNDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5607F7C522B0AEB900DCFBCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5607F7CA22B0AEB900DCFBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5607F7CC22B0AEBA00DCFBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5607F7CF22B0AEBA00DCFBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5607F7D122B0AEBA00DCFBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5607F7D722B0AF6000DCFBCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5609BF2B22B0B32F00455C68 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		5609BF2C22B0B32F00455C68 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		5609BF2D22B0B33000455C68 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		5609BF2E22B0B33000455C68 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		5609BF2F22B0B33100455C68 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		5609BF3022B0B33200455C68 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		5609BF3122B0B33200455C68 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		5609BF3222B0B33300455C68 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		5609BF3B22B0B35400455C68 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		5609BF3C22B0B35700455C68 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
+		5609BF3D22B0B35B00455C68 /* BoringSSL-GRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "BoringSSL-GRPC.framework"; sourceTree = "<group>"; };
+		5609BF3E22B0B35F00455C68 /* gRPC-Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "gRPC-Core.framework"; sourceTree = "<group>"; };
+		5609BF3F22B0B35F00455C68 /* gRPCCertificates-Cpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "gRPCCertificates-Cpp.bundle"; sourceTree = "<group>"; };
+		5609BF4122B0B36300455C68 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = "<group>"; };
+		5609BF4222B0B37800455C68 /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "gRPC-C++.framework"; sourceTree = "<group>"; };
+		5609BF4922B0B3A100455C68 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5609BF4B22B0B3AB00455C68 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5609BF4F22B0B3C300455C68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5607F7BF22B0AEB900DCFBCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5609BF5022B0B3C300455C68 /* StoreKit.framework in Frameworks */,
+				5609BF4E22B0B3B900455C68 /* libsqlite3.tbd in Frameworks */,
+				5609BF4C22B0B3AB00455C68 /* libz.tbd in Frameworks */,
+				5609BF4A22B0B3A100455C68 /* libc++.tbd in Frameworks */,
+				5609BF4722B0B37800455C68 /* FirebaseFirestore.framework in Frameworks */,
+				5609BF3822B0B33300455C68 /* GoogleUtilities.framework in Frameworks */,
+				5609BF4822B0B37800455C68 /* gRPC-C++.framework in Frameworks */,
+				5609BF3422B0B33300455C68 /* FirebaseCore.framework in Frameworks */,
+				5609BF3622B0B33300455C68 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				5609BF4522B0B37800455C68 /* BoringSSL-GRPC.framework in Frameworks */,
+				5609BF3A22B0B33300455C68 /* FirebaseInstanceID.framework in Frameworks */,
+				5609BF4622B0B37800455C68 /* gRPC-Core.framework in Frameworks */,
+				5609BF3922B0B33300455C68 /* nanopb.framework in Frameworks */,
+				5609BF4322B0B37800455C68 /* leveldb-library.framework in Frameworks */,
+				5609BF3722B0B33300455C68 /* GoogleAppMeasurement.framework in Frameworks */,
+				5609BF4422B0B37800455C68 /* Protobuf.framework in Frameworks */,
+				5609BF3322B0B33300455C68 /* FIRAnalyticsConnector.framework in Frameworks */,
+				5609BF3522B0B33300455C68 /* FirebaseAnalytics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5607F7B922B0AEB900DCFBCC = {
+			isa = PBXGroup;
+			children = (
+				5607F7C422B0AEB900DCFBCC /* FSRNDM */,
+				5607F7C322B0AEB900DCFBCC /* Products */,
+				5609BF2A22B0B31E00455C68 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5607F7C322B0AEB900DCFBCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5607F7C222B0AEB900DCFBCC /* FSRNDM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5607F7C422B0AEB900DCFBCC /* FSRNDM */ = {
+			isa = PBXGroup;
+			children = (
+				5607F7D922B0AF6B00DCFBCC /* Resources */,
+				5607F7DA22B0AF9100DCFBCC /* Storyboards */,
+			);
+			path = FSRNDM;
+			sourceTree = "<group>";
+		};
+		5607F7D922B0AF6B00DCFBCC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5607F7D722B0AF6000DCFBCC /* GoogleService-Info.plist */,
+				5607F7C522B0AEB900DCFBCC /* AppDelegate.swift */,
+				5607F7CC22B0AEBA00DCFBCC /* Assets.xcassets */,
+				5607F7D122B0AEBA00DCFBCC /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5607F7DA22B0AF9100DCFBCC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5607F7C922B0AEB900DCFBCC /* Main.storyboard */,
+				5607F7CE22B0AEBA00DCFBCC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5609BF2A22B0B31E00455C68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5609BF4F22B0B3C300455C68 /* StoreKit.framework */,
+				5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */,
+				5609BF4B22B0B3AB00455C68 /* libz.tbd */,
+				5609BF4922B0B3A100455C68 /* libc++.tbd */,
+				5609BF3D22B0B35B00455C68 /* BoringSSL-GRPC.framework */,
+				5609BF4122B0B36300455C68 /* FirebaseFirestore.framework */,
+				5609BF4222B0B37800455C68 /* gRPC-C++.framework */,
+				5609BF3E22B0B35F00455C68 /* gRPC-Core.framework */,
+				5609BF3F22B0B35F00455C68 /* gRPCCertificates-Cpp.bundle */,
+				5609BF3B22B0B35400455C68 /* leveldb-library.framework */,
+				5609BF3C22B0B35700455C68 /* Protobuf.framework */,
+				5609BF2B22B0B32F00455C68 /* FIRAnalyticsConnector.framework */,
+				5609BF2D22B0B33000455C68 /* FirebaseAnalytics.framework */,
+				5609BF2C22B0B32F00455C68 /* FirebaseCore.framework */,
+				5609BF2E22B0B33000455C68 /* FirebaseCoreDiagnostics.framework */,
+				5609BF3222B0B33300455C68 /* FirebaseInstanceID.framework */,
+				5609BF2F22B0B33100455C68 /* GoogleAppMeasurement.framework */,
+				5609BF3022B0B33200455C68 /* GoogleUtilities.framework */,
+				5609BF3122B0B33200455C68 /* nanopb.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5607F7C122B0AEB900DCFBCC /* FSRNDM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5607F7D422B0AEBA00DCFBCC /* Build configuration list for PBXNativeTarget "FSRNDM" */;
+			buildPhases = (
+				5607F7BE22B0AEB900DCFBCC /* Sources */,
+				5607F7BF22B0AEB900DCFBCC /* Frameworks */,
+				5607F7C022B0AEB900DCFBCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSRNDM;
+			productName = FSRNDM;
+			productReference = 5607F7C222B0AEB900DCFBCC /* FSRNDM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5607F7BA22B0AEB900DCFBCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Brian Daniel";
+				TargetAttributes = {
+					5607F7C122B0AEB900DCFBCC = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5607F7BD22B0AEB900DCFBCC /* Build configuration list for PBXProject "FSRNDM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5607F7B922B0AEB900DCFBCC;
+			productRefGroup = 5607F7C322B0AEB900DCFBCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5607F7C122B0AEB900DCFBCC /* FSRNDM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5607F7C022B0AEB900DCFBCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5607F7D022B0AEBA00DCFBCC /* LaunchScreen.storyboard in Resources */,
+				5607F7CD22B0AEBA00DCFBCC /* Assets.xcassets in Resources */,
+				5607F7CB22B0AEB900DCFBCC /* Main.storyboard in Resources */,
+				5607F7D822B0AF6000DCFBCC /* GoogleService-Info.plist in Resources */,
+				5609BF4022B0B36000455C68 /* gRPCCertificates-Cpp.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5607F7BE22B0AEB900DCFBCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5607F7C622B0AEB900DCFBCC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5607F7C922B0AEB900DCFBCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5607F7CA22B0AEB900DCFBCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5607F7CE22B0AEBA00DCFBCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5607F7CF22B0AEBA00DCFBCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5607F7D222B0AEBA00DCFBCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5607F7D322B0AEBA00DCFBCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5607F7D522B0AEBA00DCFBCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F9Q94NNH5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FSRNDM/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.brianhersh.FSRNDM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5607F7D622B0AEBA00DCFBCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F9Q94NNH5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FSRNDM/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.brianhersh.FSRNDM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5607F7BD22B0AEB900DCFBCC /* Build configuration list for PBXProject "FSRNDM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5607F7D222B0AEBA00DCFBCC /* Debug */,
+				5607F7D322B0AEBA00DCFBCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5607F7D422B0AEBA00DCFBCC /* Build configuration list for PBXNativeTarget "FSRNDM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5607F7D522B0AEBA00DCFBCC /* Debug */,
+				5607F7D622B0AEBA00DCFBCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5607F7BA22B0AEB900DCFBCC /* Project object */;
+}
