@@ -23,13 +23,12 @@ class ThoughtsController {
     var thoughtsListener : ListenerRegistration?
 
     // MARK: - CRUD Method
-    
     func setListenerFor(category: String, completion: @escaping(Bool) -> Void) {
         
         if category == ThoughtCategory.popular {
             thoughtsListener = thoughtsCollectionRef?
                 .order(by: Constants.likesCount, descending: true)
-                .addSnapshotListener({ (snapshot, error) in
+                .addSnapshotListener { (snapshot, error) in
                     if let error = error {
                         print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
                         completion(false)
@@ -55,12 +54,12 @@ class ThoughtsController {
                         self.thoughts = thoughts
                         completion(true)
                     }
-                })
+                }
         } else {
             thoughtsListener = thoughtsCollectionRef?
                 .whereField(Constants.category, isEqualTo: category)
                 .order(by: Constants.timestamp, descending: true)
-                .addSnapshotListener({ (snapshot, error) in
+                .addSnapshotListener { (snapshot, error) in
                     if let error = error {
                         print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
                         completion(false)
@@ -86,20 +85,18 @@ class ThoughtsController {
                         self.thoughts = thoughts
                         completion(true)
                     }
-                })
+                }
         }
     }
     
-    func createThought(category: String, username: String, thoughtText: String) {
+    func createThoughtWith(category: String, username: String, thoughtText: String) {
         Firestore.firestore().collection(ReferenceKeys.thoughts).addDocument(data: [
             Constants.category : category,
             Constants.commentCount : 0,
             Constants.likesCount : 0,
             Constants.thoughtText : thoughtText,
             Constants.timestamp : FieldValue.serverTimestamp(),
-            Constants.username : username
-            
-        ]) { (error) in
+            Constants.username : username]) { (error) in
             if let error = error {
                 print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
             } else {

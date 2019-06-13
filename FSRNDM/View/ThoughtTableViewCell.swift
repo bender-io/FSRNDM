@@ -28,12 +28,6 @@ class ThoughtTableViewCell: UITableViewCell {
         starImage.isUserInteractionEnabled = true
     }
     
-    @objc func likeTapped() {
-        guard let thought = thought else { return }
-        Firestore.firestore().collection(ReferenceKeys.thoughts).document(thought.documentID)
-            .updateData([Constants.likesCount : thought.likesCount + 1])
-    }
-    
     //MARK: - Methods
     func configureCell(thought: Thought) {
         self.thought = thought
@@ -46,5 +40,11 @@ class ThoughtTableViewCell: UITableViewCell {
         formatter.dateFormat = "MMM d, hh:mm"
         let timestamp = formatter.string(from: thought.timestamp)
         timestampLabel.text = timestamp
+    }
+    
+    @objc func likeTapped() {
+        guard let thought = thought else { return }
+        Firestore.firestore().collection(ReferenceKeys.thoughts).document(thought.documentID)
+            .updateData([Constants.likesCount : thought.likesCount + 1])
     }
 }

@@ -21,7 +21,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.estimatedRowHeight = 80
         ThoughtsController.shared.thoughtsCollectionRef = Firestore.firestore().collection(ReferenceKeys.thoughts)
     }
     

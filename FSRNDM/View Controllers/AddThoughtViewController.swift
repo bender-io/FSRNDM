@@ -50,8 +50,7 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
         guard let username = usernameTextField.text, !username.isEmpty,
             let thoughtText = thoughtTextView.text, !thoughtText.isEmpty else { return }
         
-        ThoughtsController.shared.createThought(category: selectedCategory, username: username, thoughtText: thoughtText)
-        self.navigationController?.popViewController(animated: true)
-
+        ThoughtsController.shared.createThoughtWith(category: selectedCategory, username: username, thoughtText: thoughtText)
+        navigationController?.popViewController(animated: true)
     }
 }
