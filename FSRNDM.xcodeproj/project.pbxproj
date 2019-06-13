@@ -39,6 +39,7 @@
 		5609BF4C22B0B3AB00455C68 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4B22B0B3AB00455C68 /* libz.tbd */; };
 		5609BF4E22B0B3B900455C68 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */; };
 		5609BF5022B0B3C300455C68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4F22B0B3C300455C68 /* StoreKit.framework */; };
+		5697C7CE22B2B8A800478900 /* ThoughtsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5697C7CD22B2B8A800478900 /* ThoughtsController.swift */; };
 		56C2D92122B201A80009E4DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92022B201A80009E4DF /* Constants.swift */; };
 		56C2D92322B214010009E4DF /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92222B214010009E4DF /* Thought.swift */; };
 		56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */; };
@@ -79,6 +80,7 @@
 		5609BF4B22B0B3AB00455C68 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5609BF4F22B0B3C300455C68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5697C7CD22B2B8A800478900 /* ThoughtsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsController.swift; sourceTree = "<group>"; };
 		56C2D92022B201A80009E4DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56C2D92222B214010009E4DF /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,7 +118,6 @@
 		56010B3E22B0B9760092925B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				56C2D92022B201A80009E4DF /* Constants.swift */,
 				56C2D92222B214010009E4DF /* Thought.swift */,
 			);
 			path = Model;
@@ -168,8 +169,9 @@
 				5607F7D922B0AF6B00DCFBCC /* Resources */,
 				5607F7DA22B0AF9100DCFBCC /* Storyboards */,
 				56010B3E22B0B9760092925B /* Model */,
+				5697C7CF22B2B8AD00478900 /* Model Controller */,
 				56010B3F22B0B9800092925B /* View Controllers */,
-				56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */,
+				5697C7CC22B29DDF00478900 /* View */,
 			);
 			path = FSRNDM;
 			sourceTree = "<group>";
@@ -177,8 +179,9 @@
 		5607F7D922B0AF6B00DCFBCC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5607F7D722B0AF6000DCFBCC /* GoogleService-Info.plist */,
 				5607F7C522B0AEB900DCFBCC /* AppDelegate.swift */,
+				56C2D92022B201A80009E4DF /* Constants.swift */,
+				5607F7D722B0AF6000DCFBCC /* GoogleService-Info.plist */,
 				5607F7D122B0AEBA00DCFBCC /* Info.plist */,
 				56010B4222B0C38F0092925B /* Assets.xcassets */,
 			);
@@ -218,6 +221,22 @@
 				5609BF3122B0B33200455C68 /* nanopb.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		5697C7CC22B29DDF00478900 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5697C7CF22B2B8AD00478900 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5697C7CD22B2B8A800478900 /* ThoughtsController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +323,7 @@
 				56010B5622B0C7110092925B /* MainViewController.swift in Sources */,
 				56010B5422B0C6910092925B /* AddThoughtViewController.swift in Sources */,
 				56C2D92122B201A80009E4DF /* Constants.swift in Sources */,
+				5697C7CE22B2B8A800478900 /* ThoughtsController.swift in Sources */,
 				56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

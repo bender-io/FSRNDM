@@ -13,8 +13,8 @@ enum Constants {
     static let commentCount = "commentCount"
     static let likesCount = "likesCount"
     static let thoughtText = "thoughtText"
-    static let timeStamp = "timeStamp"
-    static let userName = "userName"
+    static let timestamp = "timestamp"
+    static let username = "username"
 }
 
 enum ThoughtCategory {
@@ -22,4 +22,8 @@ enum ThoughtCategory {
     static let serious = "serious"
     static let crazy = "crazy"
     static let popular = "popular"
+}
+
+enum ReferenceKeys {
+    static let thoughts = "thoughts"
 }

@@ -121,7 +121,7 @@
                                 <rect key="frame" x="0.0" y="152" width="414" height="710"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="thoughtCell" rowHeight="105" id="PGG-N4-CUa" customClass="ThoughtTableViewCell" customModule="FSRNDM" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="thoughtCell" rowHeight="105" id="PGG-N4-CUa" customClass="ThoughtTableViewCell" customModule="FSRNDM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PGG-N4-CUa" id="ToL-y7-yIP">
@@ -180,10 +180,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="57S-dO-ZUB" id="1YA-Ac-Yio"/>
                                             <outlet property="likesCountLabel" destination="wOe-3Z-d4X" id="1gI-nE-7R2"/>
                                             <outlet property="starImage" destination="Of2-16-qfz" id="Dza-Je-yLn"/>
                                             <outlet property="thoughtLabel" destination="aP0-la-M4m" id="8y7-av-lSM"/>
+                                            <outlet property="timestampLabel" destination="57S-dO-ZUB" id="1YA-Ac-Yio"/>
                                             <outlet property="usernameLabel" destination="bHI-Uh-8pc" id="XzV-1p-btr"/>
                                         </connections>
                                     </tableViewCell>

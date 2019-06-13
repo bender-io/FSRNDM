@@ -46,13 +46,13 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postButtonTapped(_ sender: Any) {
-        Firestore.firestore().collection("thoughts").addDocument(data: [
+        Firestore.firestore().collection(ReferenceKeys.thoughts).addDocument(data: [
             Constants.category : selectedCategory,
             Constants.commentCount : 0,
             Constants.likesCount : 0,
             Constants.thoughtText : thoughtTextView.text ?? "",
-            Constants.timeStamp : FieldValue.serverTimestamp(),
-            Constants.userName : usernameTextField.text ?? "username"
+            Constants.timestamp : FieldValue.serverTimestamp(),
+            Constants.username : usernameTextField.text ?? "username"
             
         ]) { (error) in
             if let error = error {

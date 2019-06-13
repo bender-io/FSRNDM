@@ -12,13 +12,16 @@ class ThoughtTableViewCell: UITableViewCell {
 
     //MARK: - IBOutlets
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var thoughtLabel: UILabel!
     @IBOutlet weak var starImage: UIImageView!
     @IBOutlet weak var likesCountLabel: UILabel!
     
     //MARK: - Methods
     func configureCell(thought: Thought) {
-        
+        usernameLabel.text = thought.username
+        timestampLabel.text = "\(thought.timestamp)"
+        thoughtLabel.text = thought.thoughtText
+        likesCountLabel.text = "\(thought.likesCount)"
     }
 }
