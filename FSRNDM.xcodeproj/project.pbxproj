@@ -14,8 +14,8 @@
 		56010B4E22B0C42D0092925B /* starIconFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = 56010B4822B0C42D0092925B /* starIconFilled.png */; };
 		56010B4F22B0C42D0092925B /* addThoughtIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56010B4922B0C42D0092925B /* addThoughtIcon@3x.png */; };
 		56010B5022B0C42D0092925B /* starIconFilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56010B4A22B0C42D0092925B /* starIconFilled@2x.png */; };
-		56010B5422B0C6910092925B /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56010B5322B0C6910092925B /* AddThoughtVC.swift */; };
-		56010B5622B0C7110092925B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56010B5522B0C7110092925B /* MainVC.swift */; };
+		56010B5422B0C6910092925B /* AddThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56010B5322B0C6910092925B /* AddThoughtViewController.swift */; };
+		56010B5622B0C7110092925B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56010B5522B0C7110092925B /* MainViewController.swift */; };
 		5607F7C622B0AEB900DCFBCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607F7C522B0AEB900DCFBCC /* AppDelegate.swift */; };
 		5607F7CB22B0AEB900DCFBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5607F7C922B0AEB900DCFBCC /* Main.storyboard */; };
 		5607F7D022B0AEBA00DCFBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5607F7CE22B0AEBA00DCFBCC /* LaunchScreen.storyboard */; };
@@ -39,6 +39,9 @@
 		5609BF4C22B0B3AB00455C68 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4B22B0B3AB00455C68 /* libz.tbd */; };
 		5609BF4E22B0B3B900455C68 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */; };
 		5609BF5022B0B3C300455C68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4F22B0B3C300455C68 /* StoreKit.framework */; };
+		56C2D92122B201A80009E4DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92022B201A80009E4DF /* Constants.swift */; };
+		56C2D92322B214010009E4DF /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92222B214010009E4DF /* Thought.swift */; };
+		56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +52,8 @@
 		56010B4822B0C42D0092925B /* starIconFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starIconFilled.png; sourceTree = "<group>"; };
 		56010B4922B0C42D0092925B /* addThoughtIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addThoughtIcon@3x.png"; sourceTree = "<group>"; };
 		56010B4A22B0C42D0092925B /* starIconFilled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starIconFilled@2x.png"; sourceTree = "<group>"; };
-		56010B5322B0C6910092925B /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
-		56010B5522B0C7110092925B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		56010B5322B0C6910092925B /* AddThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtViewController.swift; sourceTree = "<group>"; };
+		56010B5522B0C7110092925B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5607F7C222B0AEB900DCFBCC /* FSRNDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSRNDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5607F7C522B0AEB900DCFBCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5607F7CA22B0AEB900DCFBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +79,9 @@
 		5609BF4B22B0B3AB00455C68 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5609BF4F22B0B3C300455C68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		56C2D92022B201A80009E4DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		56C2D92222B214010009E4DF /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
+		56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,17 +116,19 @@
 		56010B3E22B0B9760092925B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				56C2D92022B201A80009E4DF /* Constants.swift */,
+				56C2D92222B214010009E4DF /* Thought.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		56010B3F22B0B9800092925B /* Model Controller */ = {
+		56010B3F22B0B9800092925B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				56010B5322B0C6910092925B /* AddThoughtVC.swift */,
-				56010B5522B0C7110092925B /* MainVC.swift */,
+				56010B5322B0C6910092925B /* AddThoughtViewController.swift */,
+				56010B5522B0C7110092925B /* MainViewController.swift */,
 			);
-			path = "Model Controller";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		56010B4422B0C41B0092925B /* Images */ = {
@@ -160,7 +168,8 @@
 				5607F7D922B0AF6B00DCFBCC /* Resources */,
 				5607F7DA22B0AF9100DCFBCC /* Storyboards */,
 				56010B3E22B0B9760092925B /* Model */,
-				56010B3F22B0B9800092925B /* Model Controller */,
+				56010B3F22B0B9800092925B /* View Controllers */,
+				56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */,
 			);
 			path = FSRNDM;
 			sourceTree = "<group>";
@@ -291,8 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5607F7C622B0AEB900DCFBCC /* AppDelegate.swift in Sources */,
-				56010B5622B0C7110092925B /* MainVC.swift in Sources */,
-				56010B5422B0C6910092925B /* AddThoughtVC.swift in Sources */,
+				56C2D92322B214010009E4DF /* Thought.swift in Sources */,
+				56010B5622B0C7110092925B /* MainViewController.swift in Sources */,
+				56010B5422B0C6910092925B /* AddThoughtViewController.swift in Sources */,
+				56C2D92122B201A80009E4DF /* Constants.swift in Sources */,
+				56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
