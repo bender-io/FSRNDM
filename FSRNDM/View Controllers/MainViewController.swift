@@ -11,10 +11,14 @@ import FirebaseFirestore
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - Properties
+    var selectedCategory = ThoughtCategory.funny
+    
     //MARK: - IBOutlets
     @IBOutlet private weak var segmentControll: UISegmentedControl!
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 80
@@ -23,7 +27,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ThoughtsController.shared.fetchAllThoughts { (success) in
+        ThoughtsController.shared.setListenerFor(category: selectedCategory) { (success) in
             if success {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -32,16 +36,45 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // MARK: - Setup Tables
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        ThoughtsController.shared.thoughtsListener?.remove()
+    }
+    
+    // MARK: - TableView Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ThoughtsController.shared.thoughts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "thoughtCell", for: indexPath) as? ThoughtTableViewCell {
-            cell.configureCell(thought: ThoughtsController.shared.thoughts[indexPath.row])
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "thoughtCell", for: indexPath) as? ThoughtTableViewCell
+        let thought = ThoughtsController.shared.thoughts[indexPath.row]
+        cell?.configureCell(thought: thought)
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    // MARK: - IBActions
+    @IBAction func segmentTapped(_ sender: Any) {
+        
+        switch segmentControll.selectedSegmentIndex {
+        case 0:
+            selectedCategory = ThoughtCategory.funny
+        case 1:
+            selectedCategory = ThoughtCategory.serious
+        case 2:
+            selectedCategory = ThoughtCategory.crazy
+        default:
+            selectedCategory = ThoughtCategory.popular
         }
-        return UITableViewCell()
+        
+        ThoughtsController.shared.thoughtsListener?.remove()
+        ThoughtsController.shared.setListenerFor(category: selectedCategory) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 }
