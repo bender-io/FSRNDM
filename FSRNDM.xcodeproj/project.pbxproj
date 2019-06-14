@@ -43,6 +43,11 @@
 		56C2D92122B201A80009E4DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92022B201A80009E4DF /* Constants.swift */; };
 		56C2D92322B214010009E4DF /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92222B214010009E4DF /* Thought.swift */; };
 		56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */; };
+		56CBE5F522B3477A00F28FE2 /* commentIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CBE5F222B3477A00F28FE2 /* commentIcon@3x.png */; };
+		56CBE5F622B3477A00F28FE2 /* commentIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CBE5F322B3477A00F28FE2 /* commentIcon.png */; };
+		56CBE5F722B3477A00F28FE2 /* commentIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CBE5F422B3477A00F28FE2 /* commentIcon@2x.png */; };
+		56CBE5F922B34B9700F28FE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBE5F822B34B9700F28FE2 /* LoginViewController.swift */; };
+		56CBE5FB22B34D4C00F28FE2 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CBE5FA22B34D4C00F28FE2 /* CreateUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +89,11 @@
 		56C2D92022B201A80009E4DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56C2D92222B214010009E4DF /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTableViewCell.swift; sourceTree = "<group>"; };
+		56CBE5F222B3477A00F28FE2 /* commentIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "commentIcon@3x.png"; sourceTree = "<group>"; };
+		56CBE5F322B3477A00F28FE2 /* commentIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commentIcon.png; sourceTree = "<group>"; };
+		56CBE5F422B3477A00F28FE2 /* commentIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "commentIcon@2x.png"; sourceTree = "<group>"; };
+		56CBE5F822B34B9700F28FE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		56CBE5FA22B34D4C00F28FE2 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +138,8 @@
 			children = (
 				56010B5322B0C6910092925B /* AddThoughtViewController.swift */,
 				56010B5522B0C7110092925B /* MainViewController.swift */,
+				56CBE5F822B34B9700F28FE2 /* LoginViewController.swift */,
+				56CBE5FA22B34D4C00F28FE2 /* CreateUserViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -141,6 +153,9 @@
 				56010B4822B0C42D0092925B /* starIconFilled.png */,
 				56010B4A22B0C42D0092925B /* starIconFilled@2x.png */,
 				56010B4622B0C42D0092925B /* starIconFilled@3x.png */,
+				56CBE5F322B3477A00F28FE2 /* commentIcon.png */,
+				56CBE5F422B3477A00F28FE2 /* commentIcon@2x.png */,
+				56CBE5F222B3477A00F28FE2 /* commentIcon@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -301,9 +316,12 @@
 				5607F7CB22B0AEB900DCFBCC /* Main.storyboard in Resources */,
 				5607F7D822B0AF6000DCFBCC /* GoogleService-Info.plist in Resources */,
 				5609BF4022B0B36000455C68 /* gRPCCertificates-Cpp.bundle in Resources */,
+				56CBE5F522B3477A00F28FE2 /* commentIcon@3x.png in Resources */,
 				56010B4F22B0C42D0092925B /* addThoughtIcon@3x.png in Resources */,
+				56CBE5F622B3477A00F28FE2 /* commentIcon.png in Resources */,
 				56010B4B22B0C42D0092925B /* addThoughtIcon.png in Resources */,
 				56010B4C22B0C42D0092925B /* starIconFilled@3x.png in Resources */,
+				56CBE5F722B3477A00F28FE2 /* commentIcon@2x.png in Resources */,
 				56010B5022B0C42D0092925B /* starIconFilled@2x.png in Resources */,
 				56010B4322B0C38F0092925B /* Assets.xcassets in Resources */,
 				56010B4D22B0C42D0092925B /* addThoughtIcon@2x.png in Resources */,
@@ -322,6 +340,8 @@
 				56C2D92322B214010009E4DF /* Thought.swift in Sources */,
 				56010B5622B0C7110092925B /* MainViewController.swift in Sources */,
 				56010B5422B0C6910092925B /* AddThoughtViewController.swift in Sources */,
+				56CBE5F922B34B9700F28FE2 /* LoginViewController.swift in Sources */,
+				56CBE5FB22B34D4C00F28FE2 /* CreateUserViewController.swift in Sources */,
 				56C2D92122B201A80009E4DF /* Constants.swift in Sources */,
 				5697C7CE22B2B8A800478900 /* ThoughtsController.swift in Sources */,
 				56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */,
