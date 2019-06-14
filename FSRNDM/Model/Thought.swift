@@ -27,9 +27,3 @@ class Thought {
         self.documentID = documentID
     }
 }
-
-extension Thought : Equatable {
-    static func == (lhs: Thought, rhs: Thought) -> Bool {
-        return lhs.username == rhs.username && lhs.timestamp == rhs.timestamp
-    }
-}

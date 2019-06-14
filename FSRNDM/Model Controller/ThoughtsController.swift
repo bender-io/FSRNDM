@@ -34,27 +34,11 @@ class ThoughtsController {
                         completion(false)
                         
                     } else {
-                        guard let snapshot = snapshot else { completion(false) ; return }
-                        
-                        var thoughts : [Thought] = []
-                        for document in snapshot.documents {
-                            let data = document.data()
-                            let username = data[Constants.username] as? String ?? "Anonymous"
-                            let timestampUgly = data[Constants.timestamp] as? Timestamp ?? Timestamp()
-                            let timestampPretty = timestampUgly.dateValue()
-                            let thoughtText = data[Constants.thoughtText] as? String ?? ""
-                            let likesCount = data[Constants.likesCount] as? Int ?? 0
-                            let commentCount = data[Constants.commentCount] as? Int ?? 0
-                            let documentID = document.documentID
-                            
-                            let newThought = Thought(username: username, timestamp: timestampPretty, thoughtText: thoughtText, likesCount: likesCount, commentCount: commentCount, documentID: documentID)
-                            
-                            thoughts.append(newThought)
-                        }
-                        self.thoughts = thoughts
+                        self.thoughts = self.parseData(snapshot: snapshot)
                         completion(true)
                     }
                 }
+            
         } else {
             thoughtsListener = thoughtsCollectionRef?
                 .whereField(Constants.category, isEqualTo: category)
@@ -65,24 +49,7 @@ class ThoughtsController {
                         completion(false)
                         
                     } else {
-                        guard let snapshot = snapshot else { completion(false) ; return }
-                        
-                        var thoughts : [Thought] = []
-                        for document in snapshot.documents {
-                            let data = document.data()
-                            let username = data[Constants.username] as? String ?? "Anonymous"
-                            let timestampUgly = data[Constants.timestamp] as? Timestamp ?? Timestamp()
-                            let timestampPretty = timestampUgly.dateValue()
-                            let thoughtText = data[Constants.thoughtText] as? String ?? ""
-                            let likesCount = data[Constants.likesCount] as? Int ?? 0
-                            let commentCount = data[Constants.commentCount] as? Int ?? 0
-                            let documentID = document.documentID
-                            
-                            let newThought = Thought(username: username, timestamp: timestampPretty, thoughtText: thoughtText, likesCount: likesCount, commentCount: commentCount, documentID: documentID)
-                            
-                            thoughts.append(newThought)
-                        }
-                        self.thoughts = thoughts
+                        self.thoughts = self.parseData(snapshot: snapshot)
                         completion(true)
                     }
                 }
@@ -103,5 +70,27 @@ class ThoughtsController {
                 print("thought saved!")
             }
         }
+    }
+    
+    func parseData(snapshot: QuerySnapshot?) -> [Thought] {
+        
+        guard let snapshot = snapshot else { return [] }
+        
+        var thoughts : [Thought] = []
+        for document in snapshot.documents {
+            let data = document.data()
+            let username = data[Constants.username] as? String ?? "Anonymous"
+            let timestampUgly = data[Constants.timestamp] as? Timestamp ?? Timestamp()
+            let timestampPretty = timestampUgly.dateValue()
+            let thoughtText = data[Constants.thoughtText] as? String ?? ""
+            let likesCount = data[Constants.likesCount] as? Int ?? 0
+            let commentCount = data[Constants.commentCount] as? Int ?? 0
+            let documentID = document.documentID
+            
+            let newThought = Thought(username: username, timestamp: timestampPretty, thoughtText: thoughtText, likesCount: likesCount, commentCount: commentCount, documentID: documentID)
+            
+            thoughts.append(newThought)
+        }
+        return thoughts
     }
 }
