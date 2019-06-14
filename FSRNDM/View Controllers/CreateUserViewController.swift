@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class CreateUserViewController: UIViewController {
     
@@ -26,9 +28,38 @@ class CreateUserViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func createUserButtonTapped(_ sender: Any) {
         
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let username = usernameTextField.text else { return }
+    
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
+            }
+            
+            guard let user = authResult?.user else { return }
+            
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = username
+            changeRequest.commitChanges(completion: { (error) in
+                if let error = error {
+                    print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
+                }
+            })
+            let userID = user.uid
+            Firestore.firestore().collection(ReferenceKeys.users).document(userID).setData([
+                Constants.username : username,
+                Constants.dateCreated : FieldValue.serverTimestamp()], completion: { (error) in
+                if let error = error {
+                    print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
+                } else {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        }
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
 }
