@@ -40,6 +40,10 @@
 		5609BF4E22B0B3B900455C68 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */; };
 		5609BF5022B0B3C300455C68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609BF4F22B0B3C300455C68 /* StoreKit.framework */; };
 		5697C7CE22B2B8A800478900 /* ThoughtsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5697C7CD22B2B8A800478900 /* ThoughtsController.swift */; };
+		569A6CF722B889180025C319 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A6CF622B889180025C319 /* Extensions.swift */; };
+		569A6CF922B88FA60025C319 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A6CF822B88FA60025C319 /* CommentsViewController.swift */; };
+		569A6CFB22B894780025C319 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A6CFA22B894780025C319 /* CommentsTableViewCell.swift */; };
+		569A6CFD22B897390025C319 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A6CFC22B897390025C319 /* Comment.swift */; };
 		56C2D92122B201A80009E4DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92022B201A80009E4DF /* Constants.swift */; };
 		56C2D92322B214010009E4DF /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92222B214010009E4DF /* Thought.swift */; };
 		56C2D92622B215610009E4DF /* ThoughtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */; };
@@ -88,6 +92,10 @@
 		5609BF4D22B0B3B900455C68 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5609BF4F22B0B3C300455C68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5697C7CD22B2B8A800478900 /* ThoughtsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsController.swift; sourceTree = "<group>"; };
+		569A6CF622B889180025C319 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		569A6CF822B88FA60025C319 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		569A6CFA22B894780025C319 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		569A6CFC22B897390025C319 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		56C2D92022B201A80009E4DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56C2D92222B214010009E4DF /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTableViewCell.swift; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				56C2D92222B214010009E4DF /* Thought.swift */,
+				569A6CFC22B897390025C319 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 				56010B5522B0C7110092925B /* MainViewController.swift */,
 				56CBE5F822B34B9700F28FE2 /* LoginViewController.swift */,
 				56CBE5FA22B34D4C00F28FE2 /* CreateUserViewController.swift */,
+				569A6CF822B88FA60025C319 /* CommentsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +215,7 @@
 				5607F7D722B0AF6000DCFBCC /* GoogleService-Info.plist */,
 				5607F7D122B0AEBA00DCFBCC /* Info.plist */,
 				56010B4222B0C38F0092925B /* Assets.xcassets */,
+				569A6CF622B889180025C319 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				56C2D92522B215610009E4DF /* ThoughtTableViewCell.swift */,
+				569A6CFA22B894780025C319 /* CommentsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,9 +358,13 @@
 			files = (
 				5607F7C622B0AEB900DCFBCC /* AppDelegate.swift in Sources */,
 				56C2D92322B214010009E4DF /* Thought.swift in Sources */,
+				569A6CF922B88FA60025C319 /* CommentsViewController.swift in Sources */,
 				56010B5622B0C7110092925B /* MainViewController.swift in Sources */,
 				56010B5422B0C6910092925B /* AddThoughtViewController.swift in Sources */,
 				56CBE5F922B34B9700F28FE2 /* LoginViewController.swift in Sources */,
+				569A6CF722B889180025C319 /* Extensions.swift in Sources */,
+				569A6CFB22B894780025C319 /* CommentsTableViewCell.swift in Sources */,
+				569A6CFD22B897390025C319 /* Comment.swift in Sources */,
 				56CBE5FB22B34D4C00F28FE2 /* CreateUserViewController.swift in Sources */,
 				56C2D92122B201A80009E4DF /* Constants.swift in Sources */,
 				5697C7CE22B2B8A800478900 /* ThoughtsController.swift in Sources */,

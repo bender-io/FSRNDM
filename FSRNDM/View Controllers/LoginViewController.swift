@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -24,8 +26,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-    }
-    @IBAction func createUserButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                self.handleError(error)
+                print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
+            }
+            else {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     /*

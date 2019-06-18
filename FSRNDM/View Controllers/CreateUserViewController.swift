@@ -34,6 +34,7 @@ class CreateUserViewController: UIViewController {
     
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
+                self.handleError(error)
                 print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
             }
             

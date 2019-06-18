@@ -8,11 +8,13 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseAuth
 
 class ThoughtsController {
     
     // MARK: - Source of Truth
     var thoughts : [Thought] = []
+    var comments : [Comment] = []
     
     // MARK: - Singleton
     static let shared = ThoughtsController()
@@ -21,6 +23,7 @@ class ThoughtsController {
     // MARK: - Firestore
     var thoughtsCollectionRef : CollectionReference?
     var thoughtsListener : ListenerRegistration?
+    var handle : AuthStateDidChangeListenerHandle?
 
     // MARK: - CRUD Method
     func setListenerFor(category: String, completion: @escaping(Bool) -> Void) {

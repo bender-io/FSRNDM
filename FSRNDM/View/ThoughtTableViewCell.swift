@@ -20,6 +20,7 @@ class ThoughtTableViewCell: UITableViewCell {
     @IBOutlet weak var thoughtLabel: UILabel!
     @IBOutlet weak var starImage: UIImageView!
     @IBOutlet weak var likesCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,6 +41,7 @@ class ThoughtTableViewCell: UITableViewCell {
         formatter.dateFormat = "MMM d, hh:mm"
         let timestamp = formatter.string(from: thought.timestamp)
         timestampLabel.text = timestamp
+        commentCountLabel.text = String(thought.commentCount)
     }
     
     @objc func likeTapped() {
