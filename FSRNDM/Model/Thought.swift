@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FirebaseFirestore
 
 class Thought {
     
@@ -25,11 +24,5 @@ class Thought {
         self.likesCount = likesCount
         self.commentCount = commentCount
         self.documentID = documentID
-    }
-}
-
-extension Thought : Equatable {
-    static func == (lhs: Thought, rhs: Thought) -> Bool {
-        return lhs.username == rhs.username && lhs.timestamp == rhs.timestamp
     }
 }

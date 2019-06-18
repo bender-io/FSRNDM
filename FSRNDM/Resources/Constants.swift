@@ -15,6 +15,7 @@ enum Constants {
     static let thoughtText = "thoughtText"
     static let timestamp = "timestamp"
     static let username = "username"
+    static let dateCreated = "dateCreated"
 }
 
 enum ThoughtCategory {
@@ -26,4 +27,5 @@ enum ThoughtCategory {
 
 enum ReferenceKeys {
     static let thoughts = "thoughts"
+    static let users = "users"
 }

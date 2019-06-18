@@ -46,20 +46,11 @@ class AddThoughtViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postButtonTapped(_ sender: Any) {
-        Firestore.firestore().collection(ReferenceKeys.thoughts).addDocument(data: [
-            Constants.category : selectedCategory,
-            Constants.commentCount : 0,
-            Constants.likesCount : 0,
-            Constants.thoughtText : thoughtTextView.text ?? "",
-            Constants.timestamp : FieldValue.serverTimestamp(),
-            Constants.username : usernameTextField.text ?? "username"
-            
-        ]) { (error) in
-            if let error = error {
-                print(" 🐌 Snail it found in \(#function) : \(error.localizedDescription) : \(error)")
-            } else {
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
+        
+        guard let username = usernameTextField.text, !username.isEmpty,
+            let thoughtText = thoughtTextView.text, !thoughtText.isEmpty else { return }
+        
+        ThoughtsController.shared.createThoughtWith(category: selectedCategory, username: username, thoughtText: thoughtText)
+        navigationController?.popViewController(animated: true)
     }
 }
